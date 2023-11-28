@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gunn.MainPage">
+    
+
+    <StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Button Text="Добавить Оружие" Clicked="AddGun" Grid.Column="0" Grid.Row="0" HorizontalOptions="CenterAndExpand" BackgroundColor="#3498db" TextColor="White" CornerRadius="5" Margin="20, 10" />
+            <Button Text="Патроны" Clicked="NewPage" Grid.Column="1" Grid.Row="0" HorizontalOptions="CenterAndExpand" BackgroundColor="#3498db" TextColor="White" CornerRadius="5" Margin="40, 10, 0, 10" />
+        </Grid>
+        <Label TextColor="Black" Grid.ColumnSpan="2" Grid.Row="1" Text="Оружие" HorizontalOptions="CenterAndExpand"/>
+        <ListView x:Name="gunslist" ItemTapped="SelectedGun" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"  Margin="20, 10"/>
+    </StackLayout>
+</ContentPage>
